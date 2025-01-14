@@ -26,7 +26,7 @@
             {{-- Pencarian --}}
             <form action="{{ route('sales.index') }}" method="GET" class="d-flex mb-3">
                 <input type="text" name="search" class="form-control me-2" placeholder="Cari buku...">
-                <button type="submit" class="btn btn-outline-light">
+                <button type="submit" class="btn btn-outline-primary">
                     <i class="bi bi-search"></i> Cari
                 </button>
             </form>

@@ -29,7 +29,7 @@
                         <h4 class="card-title">Tambah Buku Baru</h4>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Tambahkan buku baru yang ingin Anda jual.</p>
+                        <p class="card-text">Tambahkan buku baru yang ingin dijual. Dapat menambahkan buku yang memiliki berbagai kategori dan harga yang berbeda.</p>
                         <a href="{{ route('books.create') }}" class="btn btn-light btn-block">Tambah Buku</a>
                     </div>
                 </div>
