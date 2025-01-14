@@ -1,4 +1,5 @@
 import 'bootstrap';
+import $ from 'jquery';
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -8,7 +9,7 @@ import 'bootstrap';
 
 import axios from 'axios';
 window.axios = axios;
-
+window.$ = $;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
