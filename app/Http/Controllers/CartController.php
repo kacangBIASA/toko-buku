@@ -34,14 +34,13 @@ class CartController extends Controller
         $cartItem = Cart::where('book_id', $book->id)->first();
 
         if ($cartItem) {
-            // Validasi jika stok tidak cukup untuk menambahkan quantity yang baru
-            $totalQuantity = $cartItem->quantity + $quantity;
-            if ($book->stock < $totalQuantity) {
+            // Validasi jika stok buku tidak cukup
+            if ($book->stock < $quantity) {
                 return redirect()->route('sales.index')->with('error', 'Jumlah yang diminta melebihi stok tersedia!');
             }
 
-            // Tambahkan quantity di keranjang
-            $cartItem->quantity = $totalQuantity;
+            // Update quantity di keranjang
+            $cartItem->quantity += $quantity;
             $cartItem->save();
         } else {
             // Tambahkan buku baru ke keranjang
